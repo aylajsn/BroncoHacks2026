@@ -32,7 +32,7 @@ async function identifyClothing(imagePath) {
                     mimeType: mimeType
                 }
             },
-            'Identify all clothing items visible in this image. For each item, provide: 1) The type of clothing, 2) Color, 3) Style/Pattern, 4) Condition. Format as a structured list.'
+            'Identify all clothing and accessories visible in this image. For each item, provide: 1) The type of clothing/accessory, 2) Color, 3) Style/Pattern, 4) Condition. Format as a structured list.'
         ]);
         const result = response.response.candidates[0].content.parts[0].text;
         return result;
